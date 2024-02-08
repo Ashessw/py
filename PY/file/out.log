@@ -1,0 +1,140 @@
+2024-02-07 09:36:28.177 | ERROR    | __main__:nested:11 - What?!
+Traceback (most recent call last):
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x00000257F46AB920, file "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel_launch...
+           └ <function _run_code at 0x00000257F46C6670>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x00000257F46AB920, file "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel_launch...
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel_launcher.py", line 17, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'd:\\Program Files\\miniconda3\\envs\\MyVenv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\traitlets\config\application.py", line 1077, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x00000257F8CF21F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x00000257F41B3DC0>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel\kernelapp.py", line 701, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x00000257F8CF2DC0>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x00000257F8D3DC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x00000257F41B3DC0>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\tornado\platform\asyncio.py", line 195, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function ProactorEventLoop.run_forever at 0x00000257F67B3550>
+    │    └ <ProactorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x00000257F8D3DC10>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000257F67063A0>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x00000257F669E9D0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000257F8D8AD90>(<Future finis...B40>, ...],))>)>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x00000257F8D8AD90>(<Future finis...B40>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x00000257F8D8AD90>(<Future finis...B40>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000257F8D8AD90>(<Future finis...B40>, ...],))>)>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel\kernelbase.py", line 534, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x00000257F883AD30>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x00000257F8D4D4C0>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel\kernelbase.py", line 523, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.sugar.frame.Frame object at 0x00000257F8D9B040>, <zmq.sugar.frame.Frame object at 0x00000257F8D115C0>, <zmq.sugar.fram...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x00000257F8D4D4C0>>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel\kernelbase.py", line 429, in dispatch_shell
+    await result
+          └ <coroutine object Kernel.execute_request at 0x00000257F8DB7840>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x00000257F8DB73C0>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel\ipkernel.py", line 429, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x00000257F8CE19D0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x00000257F8D4DA00>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\ipykernel\zmqshell.py", line 549, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/d%3A/PY/file/test%20copy.ipynb#X25sZmlsZQ%3D%3D'}
+                             └ ('# Caution, "diagnose=True" is the default and may leak sensitive data in prod\nlogger.add("out.log", backtrace=True, diagno...
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\IPython\core\interactiveshell.py", line 3009, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x00000257F76D8CA0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x00000257F8D4DA00>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\IPython\core\interactiveshell.py", line 3064, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x00000257992C8DC0>
+             └ <function _pseudo_sync_runner at 0x00000257F76C6550>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\IPython\core\async_helpers.py", line 129, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x00000257992C8DC0>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\IPython\core\interactiveshell.py", line 3269, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\13211\\AppData\\Local\\Temp\\ipykernel_33852\\3759549636.py'
+                       │    │             │        └ [<_ast.Expr object at 0x00000257F46B9D90>, <_ast.FunctionDef object at 0x00000257F8DB18B0>, <_ast.FunctionDef object at 0x000...
+                       │    │             └ <_ast.Module object at 0x00000257992DCFD0>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x00000257F76D8F70>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x00000257F8D4DA00>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\IPython\core\interactiveshell.py", line 3448, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 257992dcf70, execution_count=2 error_before_exec=None error_in_exec=None info=<ExecutionInfo objec...
+             │    │        └ <code object <module> at 0x00000257992FA2F0, file "C:\Users\13211\AppData\Local\Temp\ipykernel_33852\3759549636.py", line 13>
+             │    └ <function InteractiveShell.run_code at 0x00000257F76D9040>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x00000257F8D4DA00>
+
+  File "d:\Program Files\miniconda3\envs\MyVenv\lib\site-packages\IPython\core\interactiveshell.py", line 3508, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x00000257F8D4DA00>
+         │         │    └ <property object at 0x00000257F76C93B0>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x00000257F8D4DA00>
+         └ <code object <module> at 0x00000257992FA2F0, file "C:\Users\13211\AppData\Local\Temp\ipykernel_33852\3759549636.py", line 13>
+
+  File "C:\Users\13211\AppData\Local\Temp\ipykernel_33852\3759549636.py", line 13, in <module>
+    nested(0)
+    └ <function nested at 0x00000257F8D9D4C0>
+
+> File "C:\Users\13211\AppData\Local\Temp\ipykernel_33852\3759549636.py", line 9, in nested
+    func(5, c)
+    │       └ 0
+    └ <function func at 0x00000257F8D9D5E0>
+
+  File "C:\Users\13211\AppData\Local\Temp\ipykernel_33852\3759549636.py", line 5, in func
+    return a / b
+           │   └ 0
+           └ 5
+
+ZeroDivisionError: division by zero
